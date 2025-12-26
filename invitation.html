@@ -17,7 +17,10 @@ body{
   background:#f0f2f5;
   direction:rtl;
   padding:30px;
+  width:210mm;
+  margin:auto;
 }
+
 .box{
   max-width:750px;
   margin:auto;
@@ -26,7 +29,11 @@ body{
   border-radius:12px;
   box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
-h2,h3{text-align:center;color:#1b3a57;}
+
+h2,h3{
+  text-align:center;
+  color:#1b3a57;
+}
 
 input,button{
   width:100%;
@@ -35,14 +42,42 @@ input,button{
   font-size:16px;
   border-radius:6px;
 }
-input{border:1px solid #ccc;}
-button{border:none;font-weight:bold;cursor:pointer;}
-button:hover{opacity:.9;}
 
-#acceptBtn{background:#1b3a57;color:#fff;}
-#declineBtn{background:#9b2c2c;color:#fff;}
-#savePngBtn{background:#2c7e2c;color:#fff;margin-top:15px;}
-#savePdfBtn{background:#1b3a57;color:#fff;margin-top:10px;}
+input{
+  border:1px solid #ccc;
+}
+
+button{
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  opacity:.9;
+}
+
+#acceptBtn{
+  background:#1b3a57;
+  color:#fff;
+}
+
+#declineBtn{
+  background:#9b2c2c;
+  color:#fff;
+}
+
+#savePngBtn{
+  background:#2c7e2c;
+  color:#fff;
+  margin-top:15px;
+}
+
+#savePdfBtn{
+  background:#1b3a57;
+  color:#fff;
+  margin-top:10px;
+}
 
 .invitation{
   display:none;
@@ -50,12 +85,26 @@ button:hover{opacity:.9;}
   padding:30px;
   margin-top:30px;
   border-radius:12px;
+  page-break-inside: avoid;
 }
 
-.header{text-align:center;margin-bottom:20px;}
-.event-name{font-size:22px;font-weight:bold;color:#1b3a57;margin:15px 0;}
+.header{
+  text-align:center;
+  margin-bottom:20px;
+}
 
-.text{font-size:17px;line-height:2;text-align:justify;}
+.event-name{
+  font-size:22px;
+  font-weight:bold;
+  color:#1b3a57;
+  margin:15px 0;
+}
+
+.text{
+  font-size:17px;
+  line-height:2;
+  text-align:justify;
+}
 
 .info{
   margin-top:20px;
@@ -64,15 +113,21 @@ button:hover{opacity:.9;}
   border-radius:6px;
 }
 
-.choice{text-align:center;margin-top:20px;font-size:18px;}
+.choice{
+  text-align:center;
+  margin-top:20px;
+  font-size:18px;
+}
 
 .stamp{
   text-align:center;
   margin-top:30px;
 }
+
 .stamp img{
-  width:120px;
-  opacity:0.9;
+  width:140px;
+  max-width:100%;
+  opacity:0.95;
 }
 
 .footer{
@@ -84,8 +139,14 @@ button:hover{opacity:.9;}
   color:#555;
 }
 
-.row{display:flex;gap:12px;}
-.row input{width:50%;}
+.row{
+  display:flex;
+  gap:12px;
+}
+
+.row input{
+  width:50%;
+}
 
 .error{
   display:none;
@@ -95,6 +156,16 @@ button:hover{opacity:.9;}
   border:1px solid #f5b5b5;
   color:#7a1f1f;
   border-radius:8px;
+}
+
+/* ===== إعدادات الطباعة و PDF ===== */
+@page{
+  size:A4;
+  margin:15mm;
+}
+
+img{
+  max-width:100%;
 }
 </style>
 </head>
